@@ -9,6 +9,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { ListCategoriesComponentComponent } from './list-categories-component/list-categories-component.component';
 import { HighlighterDirective } from './highlighter.directive';
 import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponentComponent,
     HomeComponentComponent,
     ListCategoriesComponentComponent,
-    HighlighterDirective
+    HighlighterDirective,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
