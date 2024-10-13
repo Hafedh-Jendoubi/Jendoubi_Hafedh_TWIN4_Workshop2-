@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductsCategoryComponentComponent } from './products-category-component/products-category-component.component';
+import { ProductsCategoryQPComponentComponent } from './products-category-qpcomponent/products-category-qpcomponent.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProductsCategoryComponentComponent } from './products-category-componen
     HighlighterDirective,
     SearchPipe,
     NotfoundComponent,
-    ProductsCategoryComponentComponent
+    ProductsCategoryComponentComponent,
+    ProductsCategoryQPComponentComponent
   ],
   imports: [
     BrowserModule,
