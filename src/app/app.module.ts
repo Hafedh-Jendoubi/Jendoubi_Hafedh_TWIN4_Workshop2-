@@ -11,6 +11,7 @@ import { HighlighterDirective } from './highlighter.directive';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ProductsCategoryComponentComponent } from './products-category-component/products-category-component.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     ListCategoriesComponentComponent,
     HighlighterDirective,
     SearchPipe,
-    NotfoundComponent
+    NotfoundComponent,
+    ProductsCategoryComponentComponent
   ],
   imports: [
     BrowserModule,
