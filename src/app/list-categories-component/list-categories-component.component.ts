@@ -54,7 +54,13 @@ export class ListCategoriesComponentComponent {
 
     titre = '';
 
+    constructor (private Route:Router) { }
+
     showDesc(x:string) {
       alert(x);
+    }
+
+    showDetails(x:number) {
+      this.Route.navigate(['']);
     }
 }

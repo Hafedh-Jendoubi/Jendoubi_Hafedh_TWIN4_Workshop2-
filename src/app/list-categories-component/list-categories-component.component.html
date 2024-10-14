@@ -11,7 +11,13 @@
             />
             <h3 appHighlighter>{{cat.title | uppercase}}</h3>
             <a class="btn btn-primary" *ngIf="cat.available else alt" [routerLink]="['/productCategory',cat.id]">Voir produits</a>
+            <a class="btn btn-primary" (click)="showDetails(cat.id)">Voir Details</a>
             <ng-template #alt><p style="color: red">Categorie non dispponible</p></ng-template>
+            <!-- Display details conditionally -->
+            <div *ngIf="isSelected(cat.id)">
+                <p><strong>Description:</strong> {{cat.description}}</p>
+                <!-- Add more details here if necessary -->
+            </div>
         </div>
         <!-- </div> -->
     </div>

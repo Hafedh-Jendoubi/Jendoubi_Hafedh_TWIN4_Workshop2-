@@ -79,6 +79,5 @@ export class ProductsCategoryComponentComponent {
   ngOnInit() {
     this.id = this.actR.snapshot.params["id"];
     this.productsByCategory = this.listProducts.filter(p=>p.categoryId == this.id);
-    console.log(this.productsByCategory.length);
   }
 }

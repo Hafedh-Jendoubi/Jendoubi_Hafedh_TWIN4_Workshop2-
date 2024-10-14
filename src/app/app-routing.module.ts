@@ -5,6 +5,7 @@ import { ListCategoriesComponentComponent } from './list-categories-component/li
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductsCategoryComponentComponent } from './products-category-component/products-category-component.component';
 import { ProductsCategoryQPComponentComponent } from './products-category-qpcomponent/products-category-qpcomponent.component';
+import { DetailsCategoryComponentComponent } from './details-category-component/details-category-component.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:"full"}, //Path par defaut, once I launch the project it directs me to home
@@ -14,6 +15,7 @@ const routes: Routes = [
     ]
   },
   {path: 'categories', component:ListCategoriesComponentComponent},
+  {path: 'categoryDetails', component:DetailsCategoryComponentComponent},
   {path: 'productCategory/:id', component:ProductsCategoryComponentComponent},
   {path: 'productQP', component:ProductsCategoryQPComponentComponent},
   {path: '**', component:NotfoundComponent} //The ** represents random character and it is used if the url is not found

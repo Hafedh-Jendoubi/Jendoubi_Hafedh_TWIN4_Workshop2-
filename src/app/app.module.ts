@@ -13,6 +13,7 @@ import { SearchPipe } from './search.pipe';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductsCategoryComponentComponent } from './products-category-component/products-category-component.component';
 import { ProductsCategoryQPComponentComponent } from './products-category-qpcomponent/products-category-qpcomponent.component';
+import { DetailsCategoryComponentComponent } from './details-category-component/details-category-component.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductsCategoryQPComponentComponent } from './products-category-qpcomp
     SearchPipe,
     NotfoundComponent,
     ProductsCategoryComponentComponent,
-    ProductsCategoryQPComponentComponent
+    ProductsCategoryQPComponentComponent,
+    DetailsCategoryComponentComponent
   ],
   imports: [
     BrowserModule,
