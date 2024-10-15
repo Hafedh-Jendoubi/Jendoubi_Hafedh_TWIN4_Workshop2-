@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Categorie } from '../Models/categorie';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-categories-component',
@@ -62,5 +63,11 @@ export class ListCategoriesComponentComponent {
 
     showDetails(x:number) {
       this.Route.navigate(['']);
+    }
+
+    selectedCategoryId: number | null = null;
+
+    isSelected(catId: number): boolean {
+      return this.selectedCategoryId === catId;
     }
 }
