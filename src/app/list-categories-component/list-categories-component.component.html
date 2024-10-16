@@ -2,7 +2,6 @@
     <span>Search Bar: </span><input type="text" placeholder="Chercher par categorie..." [(ngModel)]="titre"/>
     <div class="row">
         <div class="col-md-4" style="margin-bottom: 20px;" *ngFor="let cat of categories | search:titre">
-            <!-- <div *ngIf="cat.title == titre || !titre"> -->
             <img
                 [src]="cat.image"
                 [alt]="cat.title"
@@ -10,15 +9,8 @@
                 (click)="showDesc(cat.description)"
             />
             <h3 appHighlighter>{{cat.title | uppercase}}</h3>
-            <a class="btn btn-primary" *ngIf="cat.available else alt" [routerLink]="['/productCategory',cat.id]">Voir produits</a>
-            <a class="btn btn-primary" (click)="showDetails(cat.id)">Voir Details</a>
+            <a class="btn btn-primary" *ngIf="cat.available else alt" [routerLink]="['/productCategory', cat.id]">Voir produits</a>
             <ng-template #alt><p style="color: red">Categorie non dispponible</p></ng-template>
-            <!-- Display details conditionally -->
-            <div *ngIf="isSelected(cat.id)">
-                <p><strong>Description:</strong> {{cat.description}}</p>
-                <!-- Add more details here if necessary -->
-            </div>
         </div>
-        <!-- </div> -->
     </div>
 </div>

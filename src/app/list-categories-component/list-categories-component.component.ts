@@ -60,14 +60,4 @@ export class ListCategoriesComponentComponent {
     showDesc(x:string) {
       alert(x);
     }
-
-    showDetails(x:number) {
-      this.Route.navigate(['']);
-    }
-
-    selectedCategoryId: number | null = null;
-
-    isSelected(catId: number): boolean {
-      return this.selectedCategoryId === catId;
-    }
 }
