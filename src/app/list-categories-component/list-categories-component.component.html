@@ -9,8 +9,10 @@
                 (click)="showDesc(cat.description)"
             />
             <h3 appHighlighter>{{cat.title | uppercase}}</h3>
-            <a class="btn btn-primary" *ngIf="cat.available else alt" [routerLink]="['/productCategory', cat.id]">Voir produits</a>
+            <button class="btn btn-primary" *ngIf="cat.available else alt" [routerLink]="['/productCategory', cat.id]" [queryParams]="{'name':cat.title}">Voir produits</button>
+            <button class="btn btn-primary" routerLink="categoryDetails" [queryParams]="{'desc':cat.description}">Voir details</button>
             <ng-template #alt><p style="color: red">Categorie non dispponible</p></ng-template>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

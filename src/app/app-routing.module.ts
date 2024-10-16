@@ -13,8 +13,11 @@ const routes: Routes = [
       {path: 'categories', component:ListCategoriesComponentComponent}
     ]
   },
-  {path: 'categories', component:ListCategoriesComponentComponent},
-  {path: 'categoryDetails', component:DetailsCategoryComponentComponent},
+  {path: 'categories', component:ListCategoriesComponentComponent, children:
+    [
+      {path: 'categoryDetails', component:DetailsCategoryComponentComponent}
+    ]
+  },  
   {path: 'productCategory/:id', component:ProductsCategoryComponentComponent},
   {path: '**', component:NotfoundComponent} //The ** represents random character and it is used if the url is not found
 ];
