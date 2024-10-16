@@ -19,6 +19,12 @@ const routes: Routes = [
     ]
   },  
   {path: 'productCategory/:id', component:ProductsCategoryComponentComponent},
+
+  {path: 'apropos', loadChildren: () => import('./apropos-module/apropos-module.module').then(x => x.AProposModuleModule)},
+  {path: 'contact', loadChildren: () => import('./contact-module/contact-module.module').then(x => x.ContactModuleModule)},
+  {path: 'product', loadChildren: () => import('./product-module/product-module.module').then(x => x.ProductModuleModule)},
+  {path: 'profile', loadChildren: () => import('./profile-module/profile-module.module').then(x => x.ProfileModuleModule)},
+
   {path: '**', component:NotfoundComponent} //The ** represents random character and it is used if the url is not found
 ];
 

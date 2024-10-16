@@ -13,6 +13,10 @@ import { SearchPipe } from './search.pipe';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductsCategoryComponentComponent } from './products-category-component/products-category-component.component';
 import { DetailsCategoryComponentComponent } from './details-category-component/details-category-component.component';
+import { AProposModuleModule } from './apropos-module/apropos-module.module';
+import { ContactModuleModule } from './contact-module/contact-module.module';
+import { ProductModuleModule } from './product-module/product-module.module';
+import { ProfileModuleModule } from './profile-module/profile-module.module';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,16 @@ import { DetailsCategoryComponentComponent } from './details-category-component/
     SearchPipe,
     NotfoundComponent,
     ProductsCategoryComponentComponent,
-    DetailsCategoryComponentComponent
+    DetailsCategoryComponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AProposModuleModule,
+    ContactModuleModule,
+    ProductModuleModule,
+    ProfileModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
