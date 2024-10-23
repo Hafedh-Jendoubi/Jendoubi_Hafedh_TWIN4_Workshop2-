@@ -17,6 +17,7 @@ import { AProposModuleModule } from './apropos-module/apropos-module.module';
 import { ContactModuleModule } from './contact-module/contact-module.module';
 import { ProductModuleModule } from './product-module/product-module.module';
 import { ProfileModuleModule } from './profile-module/profile-module.module';
+import { AddcategoryComponent } from './addcategory/addcategory.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProfileModuleModule } from './profile-module/profile-module.module';
     NotfoundComponent,
     ProductsCategoryComponentComponent,
     DetailsCategoryComponentComponent,
+    AddcategoryComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,15 +5,18 @@ import { ListCategoriesComponentComponent } from './list-categories-component/li
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductsCategoryComponentComponent } from './products-category-component/products-category-component.component';
 import { DetailsCategoryComponentComponent } from './details-category-component/details-category-component.component';
+import { AddcategoryComponent } from './addcategory/addcategory.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:"full"}, //Path par defaut, once I launch the project it directs me to home
+  {path: 'formulaire', component:AddcategoryComponent},
   {path: 'home', component:HomeComponentComponent,
     children: [
       {path: 'categories', component:ListCategoriesComponentComponent}
     ]
   },
-  {path: 'categories', component:ListCategoriesComponentComponent, children:
+  {path: 'categories', component:ListCategoriesComponentComponent,
+    children:
     [
       {path: 'categoryDetails', component:DetailsCategoryComponentComponent}
     ]
