@@ -8,7 +8,7 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { ListCategoriesComponentComponent } from './list-categories-component/list-categories-component.component';
 import { HighlighterDirective } from './highlighter.directive';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductsCategoryComponentComponent } from './products-category-component/products-category-component.component';
@@ -40,7 +40,8 @@ import { AddcategoryComponent } from './addcategory/addcategory.component';
     AProposModuleModule,
     ContactModuleModule,
     ProductModuleModule,
-    ProfileModuleModule
+    ProfileModuleModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
