@@ -1,0 +1,60 @@
+<form [formGroup]="userGroup" (ngSubmit)="showUser()">
+    <div class="form-group">
+      <label>First Name <span style="color: red;">*</span>:</label>
+      <input type="text" formControlName="FirstN" />
+      <small *ngIf="userGroup.get('FirstN')?.invalid && userGroup.get('FirstN')?.touched" style="color: red;">
+        First Name is required
+      </small>
+    </div>
+  
+    <div class="form-group">
+      <label>Last Name <span style="color: red;">*</span>:</label>
+      <input type="text" formControlName="LastN" />
+      <small *ngIf="userGroup.get('LastN')?.invalid && userGroup.get('LastN')?.touched" style="color: red;">
+        Last Name is required
+      </small>
+    </div>
+  
+    <div class="form-group">
+      <label>Email <span style="color: red;">*</span>:</label>
+      <input type="email" formControlName="Email" />
+      <small *ngIf="userGroup.get('Email')?.invalid && userGroup.get('Email')?.touched" style="color: red;">
+        Valid Email is required
+      </small>
+    </div>
+  
+    <div formGroupName="Address" class="form-group">
+      <label>Street Number <span style="color: red;">*</span>:</label>
+      <input type="text" formControlName="StreetNumber" />
+      <small *ngIf="userGroup.get('Address.StreetNumber')?.invalid && userGroup.get('Address.StreetNumber')?.touched" style="color: red;">
+        Street Number is required
+      </small>
+  
+      <label>City <span style="color: red;">*</span>:</label>
+      <input type="text" formControlName="City" />
+      <small *ngIf="userGroup.get('Address.City')?.invalid && userGroup.get('Address.City')?.touched" style="color: red;">
+        City is required
+      </small>
+  
+      <label>Postal Code <span style="color: red;">*</span>:</label>
+      <input type="text" formControlName="CodePostal" />
+      <small *ngIf="userGroup.get('Address.CodePostal')?.invalid && userGroup.get('Address.CodePostal')?.touched" style="color: red;">
+        Postal Code is required
+      </small>
+    </div>
+  
+    <div formArrayName="Skills" class="form-group">
+      <label>Skills:</label>
+      <div *ngFor="let skill of Skills.controls; let i = index" [formGroupName]="i">
+        <input type="text" formControlName="SkillName" placeholder="Skill Name" />
+        <small *ngIf="skill.get('SkillName')?.invalid && skill.get('SkillName')?.touched" style="color: red;">
+          Skill Name is required
+        </small>
+      </div>
+      <button type="button" (click)="addSkill()">Add Skill</button>
+    </div>
+  
+    <button type="submit" class="button btn-primary" [disabled]="userGroup.invalid">Save</button>
+    <button type="reset" class="button btn-secondary">Reset</button>
+  </form>
+  

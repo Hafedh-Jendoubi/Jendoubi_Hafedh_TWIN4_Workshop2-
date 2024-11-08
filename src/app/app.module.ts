@@ -18,6 +18,7 @@ import { ContactModuleModule } from './contact-module/contact-module.module';
 import { ProductModuleModule } from './product-module/product-module.module';
 import { ProfileModuleModule } from './profile-module/profile-module.module';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AddcategoryComponent } from './addcategory/addcategory.component';
     ProductsCategoryComponentComponent,
     DetailsCategoryComponentComponent,
     AddcategoryComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,
