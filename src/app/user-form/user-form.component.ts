@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-user-form',
@@ -22,23 +22,17 @@ export class UserFormComponent {
         CodePostal: ['', Validators.required]
       }),
       Skills: this.formBuilder.array([
-        this.createSkill()
+        new FormControl('')
       ])
     });
   }
 
-  get Skills(): FormArray {
+  get Skills() {
     return this.userGroup.get('Skills') as FormArray;
   }
 
-  createSkill(): FormGroup {
-    return this.formBuilder.group({
-      SkillName: ['', Validators.required]
-    });
-  }
-
   addSkill() {
-    this.Skills.push(this.createSkill());
+    this.Skills.push(new FormControl(''));
   }
 
   showUser() {
