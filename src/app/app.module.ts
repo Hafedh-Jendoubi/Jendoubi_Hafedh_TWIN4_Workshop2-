@@ -19,6 +19,7 @@ import { ProductModuleModule } from './product-module/product-module.module';
 import { ProfileModuleModule } from './profile-module/profile-module.module';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { CardComponentComponent } from './card-component/card-component.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { UserFormComponent } from './user-form/user-form.component';
     DetailsCategoryComponentComponent,
     AddcategoryComponent,
     UserFormComponent,
+    CardComponentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Categorie } from '../Models/categorie';
 import { Router } from '@angular/router';
+import { ShortList } from '../Models/short-list';
 
 @Component({
   selector: 'app-list-categories-component',
@@ -54,6 +55,7 @@ export class ListCategoriesComponentComponent {
     ];
 
     titre = '';
+    shortList: ShortList[]=[];
 
     constructor (private Route:Router) { }
 
