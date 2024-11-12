@@ -1,3 +1,3 @@
 <app-header-component></app-header-component>
 <router-outlet></router-outlet>
-<app-footer-component></app-footer-component>
+<app-footer-component [received]="mFp" (sender)="getValue($event)"></app-footer-component>
