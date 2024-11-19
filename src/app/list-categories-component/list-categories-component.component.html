@@ -2,7 +2,7 @@
     <span>Search Bar: </span><input type="text" placeholder="Chercher par categorie..." [(ngModel)]="titre"/>
     <div class="row">
         <div class="col-md-4" style="margin-bottom: 20px;" *ngFor="let cat of categories | search:titre">
-            <app-card-component [category]="cat">
+            <app-card-component [title]="cat.title" [image]="cat.image" [description]="cat.description" [id]="cat.id" (sender)="addToShortList($event)">
                 
             </app-card-component>
         </div>

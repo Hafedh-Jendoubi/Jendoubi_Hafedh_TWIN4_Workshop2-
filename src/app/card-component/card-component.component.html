@@ -1,13 +1,13 @@
 <div>
     <img
-        [src]="category.image"
-        [alt]="category.title"
+        [src]="image"
+        [alt]="title"
         class="img-fluid h-50 w-75"
     />
-    <h3 appHighlighter>{{category.title | uppercase}}</h3>
-    <p>{{category.description}}</p>
-    <button class="btn btn-primary" *ngIf="category.available else alt" [routerLink]="['/productCategory', category.id]" [queryParams]="{'name':category.title}">Voir produits</button>
-    <button class="btn btn-primary" routerLink="categoryDetails" [queryParams]="{'desc':category.description}">Voir details</button>
-    <button class="btn btn-primary">ShortList</button>
-    <ng-template #alt><p style="color: red">Categorie non dispponible</p></ng-template>
+    <h3 appHighlighter>{{title | uppercase}}</h3>
+    <p>{{description}}</p>
+    <button class="btn btn-primary" [routerLink]="['/productCategory', id]" [queryParams]="{'name':title}" [disabled]="!isAvailable">{{btnText}}</button>
+    <button class="btn btn-primary" routerLink="categoryDetails" [queryParams]="{'desc':description}">Voir details</button>
+    <button class="btn btn-success" (click)="addToParent()">Add to ShortList</button>
+    <!--<ng-template #alt><p style="color: red">Categorie non dispponible</p></ng-template>-->
 </div>
