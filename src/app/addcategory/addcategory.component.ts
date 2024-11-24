@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { CategorieService } from '../core/categorie.service';
 
 @Component({
   selector: 'app-addcategory',
@@ -7,6 +8,8 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
   styleUrls: ['./addcategory.component.css']
 })
 export class AddcategoryComponent {
+  constructor(private categorieService: CategorieService) { }
+
   myRForm = new FormGroup({
     title: new FormControl('', [Validators.required, Validators.minLength(5), Validators.pattern('')]),
     image: new FormControl(),

@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'categories', component:ListCategoriesComponentComponent,
     children:
     [
-      {path: 'categoryDetails', component:DetailsCategoryComponentComponent}
+      {path: 'categoryDetails/id', component:DetailsCategoryComponentComponent}
     ]
   },  
   {path: 'productCategory/:id', component:ProductsCategoryComponentComponent},

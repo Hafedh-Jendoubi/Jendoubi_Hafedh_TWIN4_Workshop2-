@@ -1,16 +1,10 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Injectable } from '@angular/core';
 import { Categorie } from '../Models/categorie';
 
-@Component({
-  selector: 'app-details-category-component',
-  templateUrl: './details-category-component.component.html',
-  styleUrls: ['./details-category-component.component.css']
+@Injectable({
+  providedIn: 'root' //Visibilité tout le projet (composants et modules)
 })
-export class DetailsCategoryComponentComponent {
-  constructor(private actR:ActivatedRoute){}
-
-  id!: number;
+export class CategorieService {
   categories : Categorie[]=[
     {
       "id": 1,
@@ -56,7 +50,26 @@ export class DetailsCategoryComponentComponent {
     }
   ];
 
-  ngOnInit() {
-    this.actR.queryParamMap.subscribe(params => this.id = Number(params.get('id')));
+  constructor() { }
+
+  getAllCategories() {
+    return this.categories;
+  }
+
+  getCategoryByID(id: number) {
+    return this.categories.find(e => e.id == id);
+  }
+
+  addCategorie(categorie: Categorie) {
+    this.categories.push(categorie);
+  }
+
+  deleteCategorie(id: number) {
+    this.categories = this.categories.filter(e => e.id != id);
+  }
+
+  updateCategorie(categorie: Categorie) {
+    let index = this.categories.findIndex(e => e.id == categorie.id);
+    this.categories[index] = categorie;
   }
 }
