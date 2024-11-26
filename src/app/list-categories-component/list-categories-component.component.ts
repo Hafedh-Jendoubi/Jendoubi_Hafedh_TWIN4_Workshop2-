@@ -13,11 +13,19 @@ import { CategorieService } from '../core/categorie.service';
 export class ListCategoriesComponentComponent {
   constructor(private Route:Router, private categorieService: CategorieService) { }
 
-    categories: Categorie[] = this.categorieService.getAllCategories();
+    categories: Categorie[] = [];
     titre = '';
     shortList: ShortList[]=[];
 
     @ViewChildren(CardComponentComponent) cardList!: QueryList<CardComponentComponent>;
+
+    ngOnInit() {
+      this.categorieService.getAllCategories().subscribe(
+        (data) => this.categories = data,
+        (error) => alert('Liste introuvable'),
+        () => alert('Completed')
+      );
+    }
 
     ngAfterViewInit() {
       //console.log(this.cardList);

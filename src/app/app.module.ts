@@ -20,6 +20,7 @@ import { ProfileModuleModule } from './profile-module/profile-module.module';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { CardComponentComponent } from './card-component/card-component.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CardComponentComponent } from './card-component/card-component.componen
     ContactModuleModule,
     ProductModuleModule,
     ProfileModuleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
