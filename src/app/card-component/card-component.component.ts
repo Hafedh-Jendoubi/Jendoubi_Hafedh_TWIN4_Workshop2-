@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Categorie } from '../Models/categorie';
 
 @Component({
   selector: 'app-card-component',

@@ -5,6 +5,7 @@
             <app-card-component [title]="cat.title" [image]="cat.image" [description]="cat.description" [id]="cat.id" (sender)="addToShortList($event)">
                 
             </app-card-component>
+            <button class="btn btn-primary" (click)="deleteCategorie(cat.id)">Delete</button>
         </div>
     </div>
 </div>
