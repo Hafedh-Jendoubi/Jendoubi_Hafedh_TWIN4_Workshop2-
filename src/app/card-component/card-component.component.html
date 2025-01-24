@@ -9,5 +9,4 @@
     <button class="btn btn-primary" [routerLink]="['/productCategory', id]" [queryParams]="{'name':title}" [disabled]="isAvailable">Voir Produits</button>
     <button class="btn btn-primary" routerLink="categoryDetails" [queryParams]="{'desc':description}">Voir details</button>
     <button class="btn btn-success" (click)="addToParent()">Add to ShortList</button>
-    <!--<ng-template #alt><p style="color: red">Categorie non dispponible</p></ng-template>-->
 </div>
